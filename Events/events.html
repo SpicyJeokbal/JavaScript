@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!--     <button onclick="this.innerHTML = Date()">the time is</button>;-->    
+        <button onmouseover="showTime()" onmouseout="clearTime()" >the time is</button>
+        <p id="demo"></p>
+
+        <button id="myBtn">whatever</button>
+        
+
+
+
+</body>
+</html>
+
+<script>
+
+    function showTime(){
+
+        document.getElementById("demo").innerHTML = Date();
+    
+    }
+
+    function clearTime(){
+
+        document.getElementById("demo").innerHTML = "";
+    
+    }
+
+    function okay(){
+        let btn = document.getElementById("myBtn");
+        btn.onclick = () => alert("clicked");
+        btn.onmouseover = () => console.log("hovered");
+    }
+
+    okay();
+
+    
+
+
+
+</script>

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+
+</body>
+</html>
+
+
+<script>
+
+const car = {type:"Ferrari",
+            model:"500", 
+            color:"white",
+            Details : function(){
+                return this.type + " " + this.model + " " + this.color;
+            } 
+        };
+
+//document.getElementById("demo").innerHTML = car.Details();
+
+
+const person = {
+    name : "John",
+    age : 30,
+    city : "New York"
+}
+
+let text = "";
+for(let x in person){
+    text += person[x] + " "
+}
+
+//document.getElementById("demo").innerHTML = text;
+
+const myArray = Object.values(person);
+
+//document.getElementById("demo").innerHTML = myArray;
+
+const fruits = {Bananas : 300, Watermelon : 200, Apple : 100}
+
+
+for(let [fruit,price] of Object.entries(fruits)){
+    text += fruit + ":" + price + "<br>";
+}
+
+/* document.getElementById("demo").innerHTML = text;
+ */
+
+let myString = JSON.stringify(person);
+
+document.getElementById("demo").innerHTML = myString;
+
+
+
+
+</script>
